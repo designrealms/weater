@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+</head>
+<body>
+    <h1>News Report Sent Successfully</h1>
+    <p>News report has been sent to {{ email }}.</p>
+    <h2>News List:</h2>
+    <ul>
+        {% for news in news_list %}
+            <li>
+                <strong>Title:</strong> {{ news.title }}<br>
+                <strong>URL:</strong> <a href="{{ news.web_url }}" target="_blank">{{ news.web_url }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
